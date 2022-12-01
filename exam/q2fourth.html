@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+  
+        function computeSalary(basic,
+                                grade)
+        {
+            let allowance;
+            let hra, da, pf;
+            
+            hra = 0.1 * basic;
+            da = 0.9 * basic;
+            pf = 0.11 * basic;
+            
+            // Condition to compute the
+            // allowance for the person
+            if (grade == 'A')
+            {
+                allowance = 1700.0;
+            }
+            else if (grade == 'B')
+            {
+                allowance = 1500.0;
+            }
+            else
+            {
+                allowance = 1300.0;
+            }
+            let gross;
+            
+            // Calculate gross salary
+            gross = Math.round(basic + hra + da +
+                                allowance - pf);
+                                    
+            return gross;
+        }
+        
+        // Driver code
+            let basic = 10000;
+            let grade = 'A';
+            
+            // Function call
+            document.write(computeSalary(basic, grade));
+            
+        // This code is contributed by splevel62.
+        </script>
+        
+</body>
+</html>
